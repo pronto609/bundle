@@ -12,9 +12,17 @@ class KnpULoremIpsumExtension extends Extension
 
     public function load(array $configs, ContainerBuilder $container)
     {
-        var_dump($configs);
+//        var_dump($configs);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
+
+        $configuration = $this->getConfiguration($configs, $container);
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $definition = $container->getDefinition('knpu-lorem-ipsum.knpu_ipsum');
+        $definition->setArgument(0, $config['unicorns_are_real']);
+        $definition->setArgument(1, $config['min_sunshine']);
     }
 
     public function getAlias()
