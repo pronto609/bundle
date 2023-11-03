@@ -1,3 +1,2 @@
 knpu_lorem_ipsum:
-  word_provider: App\Service\CustomWordProvider
   min_sunshine: 5
