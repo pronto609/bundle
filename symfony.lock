@@ -176,6 +176,9 @@
     "symfony/event-dispatcher": {
         "version": "v4.0.2"
     },
+    "symfony/event-dispatcher-contracts": {
+        "version": "v1.1.13"
+    },
     "symfony/filesystem": {
         "version": "v4.0.2"
     },
@@ -250,6 +253,9 @@
     },
     "symfony/polyfill-php72": {
         "version": "v1.6.0"
+    },
+    "symfony/polyfill-php80": {
+        "version": "v1.28.0"
     },
     "symfony/process": {
         "version": "v4.0.2"
